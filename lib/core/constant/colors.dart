@@ -28,17 +28,17 @@ class AppColors {
   };
 
   static const Map<int, Color> grey = {
-    50: Color(0xFFE3E5E7),
-    100: Color(0xFFc7c9d3),
-    200: Color(0xFFb0b3c1),
-    300: Color(0xFFa5a9b8),
-    400: Color(0xFF999eaf),
-    500: Color(0xFF8e93a6),
-    600: Color(0xFF808495),
-    700: Color(0xFF727685),
-    800: Color(0xFF636774),
-    900: Color(0xFF474a53),
-    1000: Color(0xFF2b2c32),
+    50: Color(0xFFe9eaeb),
+    100: Color(0xFFd3d4d6),
+    200: Color(0xFFa6aaad),
+    300: Color(0xFF7a7f84),
+    400: Color(0xFF4d555b),
+    500: Color(0xFF212a32),
+    600: Color(0xFF1a2228),
+    700: Color(0xFF14191e),
+    800: Color(0xFF111519),
+    900: Color(0xFF0d1114),
+    1000: Color(0xFF07080a),
   };
 
   static const Map<int, Color> purple = {
@@ -50,6 +50,17 @@ class AppColors {
     700: Color(0xFF761f72),
     800: Color(0xFF581756),
     900: Color(0xFF3b1039),
+  };
+
+  static const Map<int, Color> pink = {
+    100: Color(0xFFfcb9d3),
+    200: Color(0xFFfba8c8),
+    300: Color(0xFFfa97bd),
+    400: Color(0xFFf974a7),
+    500: Color(0xFFf75191),
+    700: Color(0xFFc64174),
+    800: Color(0xFF943157),
+    900: Color(0xFF63203a),
   };
 
   static const Map<int, Color> blue = {

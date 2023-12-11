@@ -1,6 +1,6 @@
+import 'package:arabiamusic_app/core/constant/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:arabiamusic_app/core/constant/colors.dart';
 
 class ShimmerList extends StatelessWidget {
   const ShimmerList({

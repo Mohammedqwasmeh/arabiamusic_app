@@ -1,5 +1,5 @@
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:arabiamusic_app/core/constant/colors.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class ToastUtil {
   static Future<void> showToast({

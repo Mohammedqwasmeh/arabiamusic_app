@@ -18,7 +18,8 @@ class ArabiaMusicApp extends StatelessWidget {
           const NavigationRoute(),
         ],
       ),
-      theme: AppTheme.darkTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.dark,
       routeInformationParser: _appRouter.defaultRouteParser(),
     );
   }

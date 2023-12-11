@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SearchPage extends StatefulWidget {
@@ -15,8 +14,9 @@ class _SearchPageState extends State<SearchPage> {
       child: Text(
         'Search',
         style: TextStyle(
-          fontSize: 16,
+          fontSize: 18,
           fontWeight: FontWeight.w700,
+          color: Colors.white,
         ),
       ),
     ),

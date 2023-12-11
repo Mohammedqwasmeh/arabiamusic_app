@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -15,8 +14,9 @@ class _SettingsPageState extends State<SettingsPage> {
       child: Text(
         'Settings',
         style: TextStyle(
-          fontSize: 16,
+          fontSize: 18,
           fontWeight: FontWeight.w700,
+          color: Colors.white,
         ),
       ),
     ),

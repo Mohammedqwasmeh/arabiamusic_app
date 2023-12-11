@@ -1,13 +1,13 @@
 import 'dart:convert';
 import 'dart:developer' as log_dev;
 
+import 'package:arabiamusic_app/core/data/config.dart';
+import 'package:arabiamusic_app/core/error/server_failure.dart';
+import 'package:arabiamusic_app/core/error/success.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
-import 'package:arabiamusic_app/core/data/config.dart';
-import 'package:arabiamusic_app/core/error/server_failure.dart';
-import 'package:arabiamusic_app/core/error/success.dart';
 
 class NetworkUtils {
   Future<Map<String, String>> makeHeaders({

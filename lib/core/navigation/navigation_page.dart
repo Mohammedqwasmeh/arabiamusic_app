@@ -1,8 +1,8 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:arabiamusic_app/core/constant/colors.dart';
 import 'package:arabiamusic_app/core/routes/router.gr.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});
@@ -17,91 +17,84 @@ class _NavigationPageState extends State<NavigationPage> {
         routes: const [
           HomeRoute(),
           SearchRoute(),
+          SearchRoute(),
           PodcastsRoute(),
           SettingsRoute(),
         ],
         bottomNavigationBuilder: (context, tabsRouter) => NavigationBarTheme(
-          data: NavigationBarThemeData(
+          data: const NavigationBarThemeData(
             indicatorColor: Colors.transparent,
-            labelTextStyle: MaterialStateProperty.resolveWith(
-              (states) => TextStyle(
-                fontSize: 11,
-                fontWeight: FontWeight.w500,
-                color: states.contains(MaterialState.selected)
-                    ? AppColors.purple[700]
-                    : AppColors.white[600],
-              ),
-            ),
           ),
-          child: DecoratedBox(
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                topRight: Radius.circular(20),
-                topLeft: Radius.circular(20),
+          child: NavigationBar(
+            backgroundColor: AppColors.grey[500],
+            height: 60,
+            surfaceTintColor: Colors.transparent,
+            labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
+            onDestinationSelected: tabsRouter.setActiveIndex,
+            selectedIndex: tabsRouter.activeIndex,
+            destinations: <Widget>[
+              NavigationDestination(
+                icon: SvgPicture.asset(
+                  'assets/images/home.svg',
+                  width: 20,
+                ),
+                selectedIcon: SvgPicture.asset(
+                  'assets/images/home.svg',
+                  width: 25,
+                ),
+                label: 'Home',
               ),
-            ),
-            child: NavigationBar(
-              backgroundColor: Colors.white,
-              height: 60,
-              surfaceTintColor: Colors.white.withOpacity(0),
-              labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
-              onDestinationSelected: tabsRouter.setActiveIndex,
-              selectedIndex: tabsRouter.activeIndex,
-              destinations: <Widget>[
-                NavigationDestination(
-                  icon: Icon(
-                    CupertinoIcons.home,
-                    color: AppColors.white[600],
-                    size: 28,
-                  ),
-                  selectedIcon: Icon(
-                    CupertinoIcons.home,
-                    color: AppColors.white[600],
-                    size: 28,
-                  ),
-                  label: 'Home',
+              NavigationDestination(
+                icon: SvgPicture.asset(
+                  'assets/images/search.svg',
+                  width: 20,
                 ),
-                NavigationDestination(
-                  icon: Icon(
-                    Icons.search,
-                    color: AppColors.white[600],
-                    size: 28,
-                  ),
-                  selectedIcon: Icon(
-                    Icons.search,
-                    color: AppColors.purple[700],
-                    size: 28,
-                  ),
-                  label: 'Search',
+                selectedIcon: SvgPicture.asset(
+                  'assets/images/search.svg',
+                  width: 25,
                 ),
-                NavigationDestination(
-                  icon: Icon(
-                    Icons.podcasts,
-                    color: AppColors.white[600],
-                    size: 28,
+                label: 'Search',
+              ),
+              FittedBox(
+                child: SizedBox(
+                  width: 45,
+                  child: FloatingActionButton(
+                    onPressed: () {},
+                    tooltip: 'Player',
+                    elevation: 0,
+                    backgroundColor: AppColors.pink[500],
+                    shape: const CircleBorder(),
+                    child: const Icon(
+                      Icons.headphones,
+                      size: 22,
+                      color: Colors.white,
+                    ),
                   ),
-                  selectedIcon: Icon(
-                    Icons.podcasts,
-                    color: AppColors.purple[700],
-                    size: 28,
-                  ),
-                  label: 'Podcasts',
                 ),
-                NavigationDestination(
-                  icon: Icon(
-                    Icons.settings,
-                    color: AppColors.white[600],
-                    size: 28,
-                  ),
-                  selectedIcon: Icon(
-                    Icons.settings,
-                    color: AppColors.purple[700],
-                    size: 28,
-                  ),
-                  label: 'Settings',
+              ),
+              NavigationDestination(
+                icon: SvgPicture.asset(
+                  'assets/images/podcast.svg',
+                  width: 20,
                 ),
-              ],
-            ),
+                selectedIcon: SvgPicture.asset(
+                  'assets/images/podcast.svg',
+                  width: 25,
+                ),
+                label: 'Podcasts',
+              ),
+              NavigationDestination(
+                icon: SvgPicture.asset(
+                  'assets/images/settings.svg',
+                  width: 20,
+                ),
+                selectedIcon: SvgPicture.asset(
+                  'assets/images/settings.svg',
+                  width: 25,
+                ),
+                label: 'Settings',
+              ),
+            ],
           ),
         ),
       );

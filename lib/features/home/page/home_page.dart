@@ -14,8 +14,9 @@ class _HomePageState extends State<HomePage> {
           child: Text(
             'Home',
             style: TextStyle(
-              fontSize: 16,
+              fontSize: 18,
               fontWeight: FontWeight.w700,
+              color: Colors.white,
             ),
           ),
         ),

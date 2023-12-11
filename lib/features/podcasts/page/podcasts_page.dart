@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PodcastsPage extends StatefulWidget {
@@ -15,8 +14,9 @@ class _PodcastsPageState extends State<PodcastsPage> {
       child: Text(
         'Podcasts',
         style: TextStyle(
-          fontSize: 16,
+          fontSize: 18,
           fontWeight: FontWeight.w700,
+          color: Colors.white,
         ),
       ),
     ),
