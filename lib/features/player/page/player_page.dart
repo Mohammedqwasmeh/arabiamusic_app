@@ -13,7 +13,7 @@ class _PlayerPageState extends State<PlayerPage> {
   Widget build(BuildContext context) => const Scaffold(
         appBar: ArabiaMusicAppBar(
           showBackButton: true,
-          title: 'Now PLAYING',
+          title: 'NOW PLAYING',
         ),
         body: Center(
           child: Text(

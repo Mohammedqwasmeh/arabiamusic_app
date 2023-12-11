@@ -18,27 +18,31 @@ class ArabiaMusicAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: Visibility(
-        visible: showBackButton,
-        child: Center(
-          child: IconButton(
-            onPressed: () => context.router.popForced(),
-            icon: const Icon(
-              CupertinoIcons.chevron_down,
-              size: 24,
-            ),
-          ),
-        ),
-      ),
+      leading: showBackButton
+          ? Center(
+              child: IconButton(
+                onPressed: () => context.router.popForced(),
+                icon: const Icon(
+                  CupertinoIcons.chevron_down,
+                  size: 24,
+                ),
+              ),
+            )
+          : null,
       surfaceTintColor: Colors.transparent,
       elevation: 0,
-      centerTitle: true,
-      title: Text(
-        title,
-        style: const TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.w700,
-          fontSize: 18,
+      titleSpacing: 0,
+      titleTextStyle: const TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.w700,
+        fontSize: 18,
+      ),
+      centerTitle: showBackButton,
+      automaticallyImplyLeading: false,
+      title: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 18),
+        child: Text(
+          title,
         ),
       ),
       actions: [
