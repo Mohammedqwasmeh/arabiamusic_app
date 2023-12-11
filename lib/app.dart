@@ -15,7 +15,7 @@ class ArabiaMusicApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routerDelegate: _appRouter.delegate(
         initialRoutes: [
-          const NavigationRoute(),
+          NavigationRoute(),
         ],
       ),
       darkTheme: AppTheme.darkTheme,

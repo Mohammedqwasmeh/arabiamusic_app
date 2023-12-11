@@ -35,7 +35,7 @@ import 'package:auto_route/auto_route.dart';
     CustomRoute(
       path: 'Player',
       page: PlayerPage,
-      transitionsBuilder: TransitionsBuilders.slideTop,
+      transitionsBuilder: TransitionsBuilders.slideBottom,
     ),
   ],
 )

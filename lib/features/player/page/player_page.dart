@@ -1,3 +1,4 @@
+import 'package:arabiamusic_app/core/widgets/arabia_music_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class PlayerPage extends StatefulWidget {
@@ -10,6 +11,10 @@ class PlayerPage extends StatefulWidget {
 class _PlayerPageState extends State<PlayerPage> {
   @override
   Widget build(BuildContext context) => const Scaffold(
+        appBar: ArabiaMusicAppBar(
+          showBackButton: true,
+          title: 'Now PLAYING',
+        ),
         body: Center(
           child: Text(
             'Player',

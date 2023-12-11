@@ -28,9 +28,14 @@ class AppRouter extends _i7.RootStackRouter {
   @override
   final Map<String, _i7.PageFactory> pagesMap = {
     NavigationRoute.name: (routeData) {
+      final args = routeData.argsAs<NavigationRouteArgs>(
+          orElse: () => const NavigationRouteArgs());
       return _i7.CustomPage<dynamic>(
         routeData: routeData,
-        child: const _i1.NavigationPage(),
+        child: _i1.NavigationPage(
+          key: args.key,
+          activeIndex: args.activeIndex,
+        ),
         transitionsBuilder: _i7.TransitionsBuilders.fadeIn,
         opaque: true,
         barrierDismissible: false,
@@ -40,7 +45,7 @@ class AppRouter extends _i7.RootStackRouter {
       return _i7.CustomPage<dynamic>(
         routeData: routeData,
         child: const _i2.PlayerPage(),
-        transitionsBuilder: _i7.TransitionsBuilders.slideTop,
+        transitionsBuilder: _i7.TransitionsBuilders.slideBottom,
         opaque: true,
         barrierDismissible: false,
       );
@@ -108,15 +113,38 @@ class AppRouter extends _i7.RootStackRouter {
 
 /// generated route for
 /// [_i1.NavigationPage]
-class NavigationRoute extends _i7.PageRouteInfo<void> {
-  const NavigationRoute({List<_i7.PageRouteInfo>? children})
-      : super(
+class NavigationRoute extends _i7.PageRouteInfo<NavigationRouteArgs> {
+  NavigationRoute({
+    _i8.Key? key,
+    int? activeIndex,
+    List<_i7.PageRouteInfo>? children,
+  }) : super(
           NavigationRoute.name,
           path: '/',
+          args: NavigationRouteArgs(
+            key: key,
+            activeIndex: activeIndex,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'NavigationRoute';
+}
+
+class NavigationRouteArgs {
+  const NavigationRouteArgs({
+    this.key,
+    this.activeIndex,
+  });
+
+  final _i8.Key? key;
+
+  final int? activeIndex;
+
+  @override
+  String toString() {
+    return 'NavigationRouteArgs{key: $key, activeIndex: $activeIndex}';
+  }
 }
 
 /// generated route for
