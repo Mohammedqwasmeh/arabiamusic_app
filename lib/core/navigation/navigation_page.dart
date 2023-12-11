@@ -34,24 +34,40 @@ class _NavigationPageState extends State<NavigationPage> {
             selectedIndex: tabsRouter.activeIndex,
             destinations: <Widget>[
               NavigationDestination(
-                icon: SvgPicture.asset(
-                  'assets/images/home.svg',
+                icon: AnimatedContainer(
+                  duration: const Duration(milliseconds: 500),
                   width: 20,
+                  child: SvgPicture.asset(
+                    'assets/images/home.svg',
+                    width: 26,
+                  ),
                 ),
-                selectedIcon: SvgPicture.asset(
-                  'assets/images/home.svg',
-                  width: 25,
+                selectedIcon: AnimatedContainer(
+                  duration: const Duration(milliseconds: 500),
+                  width: 26,
+                  child: SvgPicture.asset(
+                    'assets/images/home.svg',
+                    width: 26,
+                  ),
                 ),
                 label: 'Home',
               ),
               NavigationDestination(
-                icon: SvgPicture.asset(
-                  'assets/images/search.svg',
+                icon: AnimatedContainer(
+                  duration: const Duration(milliseconds: 500),
                   width: 20,
+                  child: SvgPicture.asset(
+                    'assets/images/search.svg',
+                    width: 26,
+                  ),
                 ),
-                selectedIcon: SvgPicture.asset(
-                  'assets/images/search.svg',
-                  width: 25,
+                selectedIcon: AnimatedContainer(
+                  duration: const Duration(milliseconds: 500),
+                  width: 26,
+                  child: SvgPicture.asset(
+                    'assets/images/search.svg',
+                    width: 26,
+                  ),
                 ),
                 label: 'Search',
               ),
@@ -73,29 +89,46 @@ class _NavigationPageState extends State<NavigationPage> {
                 ),
               ),
               NavigationDestination(
-                icon: SvgPicture.asset(
-                  'assets/images/podcast.svg',
+                icon: AnimatedContainer(
+                  duration: const Duration(milliseconds: 500),
                   width: 20,
+                  child: SvgPicture.asset(
+                    'assets/images/podcast.svg',
+                    width: 26,
+                  ),
                 ),
-                selectedIcon: SvgPicture.asset(
-                  'assets/images/podcast.svg',
-                  width: 25,
+                selectedIcon: AnimatedContainer(
+                  duration: const Duration(milliseconds: 500),
+                  width: 26,
+                  child: SvgPicture.asset(
+                    'assets/images/podcast.svg',
+                    width: 26,
+                  ),
                 ),
                 label: 'Podcasts',
               ),
               NavigationDestination(
-                icon: SvgPicture.asset(
-                  'assets/images/settings.svg',
+                icon: AnimatedContainer(
+                  duration: const Duration(milliseconds: 500),
                   width: 20,
+                  child: SvgPicture.asset(
+                    'assets/images/settings.svg',
+                    width: 26,
+                  ),
                 ),
-                selectedIcon: SvgPicture.asset(
-                  'assets/images/settings.svg',
-                  width: 25,
+                selectedIcon: AnimatedContainer(
+                  duration: const Duration(milliseconds: 500),
+                  width: 26,
+                  child: SvgPicture.asset(
+                    'assets/images/settings.svg',
+                    width: 26,
+                  ),
                 ),
                 label: 'Settings',
               ),
             ],
           ),
         ),
+        homeIndex: 0,
       );
 }
