@@ -1,4 +1,5 @@
 import 'package:arabiamusic_app/core/constant/colors.dart';
+import 'package:arabiamusic_app/core/data/config.dart';
 import 'package:arabiamusic_app/core/routes/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +37,7 @@ class _NavigationPageState extends State<NavigationPage> {
             ),
             child: NavigationBar(
               backgroundColor: AppColors.grey[500],
-              height: 60,
+              height: 64,
               surfaceTintColor: Colors.transparent,
               labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
               onDestinationSelected: tabsRouter.setActiveIndex,
@@ -47,7 +48,8 @@ class _NavigationPageState extends State<NavigationPage> {
                   icon: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Spacer(),
+                      const Spacer(),
+                      const Spacer(),
                       AnimatedContainer(
                         duration: const Duration(milliseconds: 500),
                         width: 20,
@@ -56,7 +58,7 @@ class _NavigationPageState extends State<NavigationPage> {
                           width: 26,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       AnimatedOpacity(
                         opacity: tabsRouter.activeIndex == 0 ? 1 : 0,
                         duration: const Duration(milliseconds: 500),
@@ -70,12 +72,14 @@ class _NavigationPageState extends State<NavigationPage> {
                           ),
                         ),
                       ),
+                      const Spacer(),
                     ],
                   ),
                   selectedIcon: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Spacer(),
+                      const Spacer(),
+                      const Spacer(),
                       AnimatedContainer(
                         duration: const Duration(milliseconds: 500),
                         width: 26,
@@ -84,7 +88,7 @@ class _NavigationPageState extends State<NavigationPage> {
                           width: 26,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       AnimatedOpacity(
                         opacity: tabsRouter.activeIndex == 0 ? 1 : 0,
                         duration: const Duration(milliseconds: 500),
@@ -98,6 +102,7 @@ class _NavigationPageState extends State<NavigationPage> {
                           ),
                         ),
                       ),
+                      const Spacer(),
                     ],
                   ),
                   label: 'Home',
@@ -106,7 +111,8 @@ class _NavigationPageState extends State<NavigationPage> {
                   icon: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Spacer(),
+                      const Spacer(),
+                      const Spacer(),
                       AnimatedContainer(
                         duration: const Duration(milliseconds: 500),
                         width: 20,
@@ -115,7 +121,7 @@ class _NavigationPageState extends State<NavigationPage> {
                           width: 26,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       AnimatedOpacity(
                         opacity: tabsRouter.activeIndex == 1 ? 1 : 0,
                         duration: const Duration(milliseconds: 500),
@@ -129,12 +135,14 @@ class _NavigationPageState extends State<NavigationPage> {
                           ),
                         ),
                       ),
+                      const Spacer(),
                     ],
                   ),
                   selectedIcon: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Spacer(),
+                      const Spacer(),
+                      const Spacer(),
                       AnimatedContainer(
                         duration: const Duration(milliseconds: 500),
                         width: 26,
@@ -143,7 +151,7 @@ class _NavigationPageState extends State<NavigationPage> {
                           width: 26,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       AnimatedOpacity(
                         opacity: tabsRouter.activeIndex == 1 ? 1 : 0,
                         duration: const Duration(milliseconds: 500),
@@ -157,6 +165,7 @@ class _NavigationPageState extends State<NavigationPage> {
                           ),
                         ),
                       ),
+                      const Spacer(),
                     ],
                   ),
                   label: 'Search',
@@ -165,7 +174,11 @@ class _NavigationPageState extends State<NavigationPage> {
                   child: SizedBox(
                     width: 45,
                     child: FloatingActionButton(
-                      onPressed: () => context.router.push(const PlayerRoute()),
+                      onPressed: () {
+                        if (Config().nowPlaying != null) {
+                          context.router.push(const PlayerRoute());
+                        }
+                      },
                       tooltip: 'Player',
                       elevation: 0,
                       backgroundColor: AppColors.pink[500],
@@ -182,7 +195,8 @@ class _NavigationPageState extends State<NavigationPage> {
                   icon: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Spacer(),
+                      const Spacer(),
+                      const Spacer(),
                       AnimatedContainer(
                         duration: const Duration(milliseconds: 500),
                         width: 22,
@@ -191,7 +205,7 @@ class _NavigationPageState extends State<NavigationPage> {
                           width: 26,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       AnimatedOpacity(
                         opacity: tabsRouter.activeIndex == 3 ? 1 : 0,
                         duration: const Duration(milliseconds: 500),
@@ -205,12 +219,14 @@ class _NavigationPageState extends State<NavigationPage> {
                           ),
                         ),
                       ),
+                      const Spacer(),
                     ],
                   ),
                   selectedIcon: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Spacer(),
+                      const Spacer(),
+                      const Spacer(),
                       AnimatedContainer(
                         duration: const Duration(milliseconds: 500),
                         width: 26,
@@ -219,7 +235,7 @@ class _NavigationPageState extends State<NavigationPage> {
                           width: 26,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       AnimatedOpacity(
                         opacity: tabsRouter.activeIndex == 3 ? 1 : 0,
                         duration: const Duration(milliseconds: 500),
@@ -233,6 +249,7 @@ class _NavigationPageState extends State<NavigationPage> {
                           ),
                         ),
                       ),
+                      const Spacer(),
                     ],
                   ),
                   label: 'Podcasts',
@@ -241,7 +258,8 @@ class _NavigationPageState extends State<NavigationPage> {
                   icon: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Spacer(),
+                      const Spacer(),
+                      const Spacer(),
                       AnimatedContainer(
                         duration: const Duration(milliseconds: 500),
                         width: 20,
@@ -250,7 +268,7 @@ class _NavigationPageState extends State<NavigationPage> {
                           width: 25,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       AnimatedOpacity(
                         opacity: tabsRouter.activeIndex == 4 ? 1 : 0,
                         duration: const Duration(milliseconds: 500),
@@ -264,12 +282,14 @@ class _NavigationPageState extends State<NavigationPage> {
                           ),
                         ),
                       ),
+                      const Spacer(),
                     ],
                   ),
                   selectedIcon: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Spacer(),
+                      const Spacer(),
+                      const Spacer(),
                       AnimatedContainer(
                         duration: const Duration(milliseconds: 500),
                         width: 25,
@@ -278,7 +298,7 @@ class _NavigationPageState extends State<NavigationPage> {
                           width: 25,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       AnimatedOpacity(
                         opacity: tabsRouter.activeIndex == 4 ? 1 : 0,
                         duration: const Duration(milliseconds: 500),
@@ -292,6 +312,7 @@ class _NavigationPageState extends State<NavigationPage> {
                           ),
                         ),
                       ),
+                      const Spacer(),
                     ],
                   ),
                   label: 'Settings',

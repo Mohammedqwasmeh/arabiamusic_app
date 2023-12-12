@@ -122,7 +122,7 @@ class MiniPlayer extends StatelessWidget {
                                         overflow: TextOverflow.ellipsis,
                                         style: const TextStyle(
                                           fontWeight: FontWeight.w400,
-                                          fontSize: 16,
+                                          fontSize: 15,
                                           color: Colors.white,
                                         ),
                                       ),

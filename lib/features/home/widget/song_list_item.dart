@@ -81,7 +81,7 @@ class SongListItem extends StatelessWidget {
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                               style: const TextStyle(
-                                fontSize: 16,
+                                fontSize: 15,
                                 fontWeight: FontWeight.w700,
                                 color: Colors.white,
                               ),
@@ -92,7 +92,7 @@ class SongListItem extends StatelessWidget {
                             Text(
                               song.genre,
                               style: const TextStyle(
-                                fontSize: 13,
+                                fontSize: 12,
                                 fontWeight: FontWeight.w300,
                                 color: Colors.white,
                               ),
@@ -104,7 +104,7 @@ class SongListItem extends StatelessWidget {
                     Text(
                       DateUtil.formatDuration(song.length),
                       style: const TextStyle(
-                        fontSize: 13,
+                        fontSize: 12,
                         fontWeight: FontWeight.w300,
                         color: Colors.white,
                       ),

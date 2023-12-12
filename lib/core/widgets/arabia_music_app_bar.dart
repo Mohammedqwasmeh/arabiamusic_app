@@ -30,12 +30,13 @@ class ArabiaMusicAppBar extends StatelessWidget implements PreferredSizeWidget {
             )
           : null,
       surfaceTintColor: Colors.transparent,
+      backgroundColor: Colors.transparent,
       elevation: 0,
       titleSpacing: 0,
       titleTextStyle: const TextStyle(
         color: Colors.white,
         fontWeight: FontWeight.w700,
-        fontSize: 18,
+        fontSize: 17,
       ),
       centerTitle: showBackButton,
       automaticallyImplyLeading: false,

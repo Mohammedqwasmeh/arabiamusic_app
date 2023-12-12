@@ -74,7 +74,7 @@ class _ArabiaMusicCardState extends State<ArabiaMusicCard> {
                     Text(
                       widget.title!,
                       style: const TextStyle(
-                        fontSize: 15,
+                        fontSize: 14,
                         fontWeight: FontWeight.w600,
                         color: Colors.white,
                       ),
