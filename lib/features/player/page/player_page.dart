@@ -207,12 +207,13 @@ class _PlayerPageState extends State<PlayerPage> {
                     CupertinoIcons.heart,
                     color: Colors.white,
                   ),
-                  Expanded(
+                  Flexible(
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 8),
                       child: Text(
                         'FOLLOW',
                         maxLines: 1,
+                        textAlign: TextAlign.center,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontWeight: FontWeight.w700,
@@ -239,12 +240,13 @@ class _PlayerPageState extends State<PlayerPage> {
                   CupertinoIcons.shuffle,
                   color: Colors.white,
                 ),
-                Expanded(
+                Flexible(
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: 8),
                     child: Text(
                       'SHUFFLE PLAY',
                       maxLines: 1,
+                      textAlign: TextAlign.center,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         fontWeight: FontWeight.w700,
