@@ -17,4 +17,17 @@ class DateUtil {
   /// Example: 08:18:41 AM
   static String formatDateTimeToAMPMTime({required DateTime dateTime}) =>
       DateFormat('hh:mm a').format(dateTime);
+
+  /// Example 01:23:23
+  static String formatDuration(int seconds) {
+    final hours = seconds ~/ 3600;
+    final minutes = (seconds % 3600) ~/ 60;
+    final remainingSeconds = seconds % 60;
+
+    final formattedDuration = '${hours.toString().padLeft(2, '0')}:'
+        '${minutes.toString().padLeft(2, '0')}:'
+        '${remainingSeconds.toString().padLeft(2, '0')}';
+
+    return formattedDuration;
+  }
 }

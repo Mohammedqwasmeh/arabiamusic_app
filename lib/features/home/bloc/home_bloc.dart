@@ -13,6 +13,7 @@ part 'home_state.dart';
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc() : super(HomeInitial()) {
     on<GetAllSongs>(_getData);
+    on<RefreshAllSongs>(_getData);
   }
 
   List<Song>? _cachedAllSongs;
@@ -74,7 +75,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     }, (Success success) {
       final data = success.data;
       if (data != null) {
-        final listOfSongs = data as List;
+        final listOfSongs = data['data'] as List;
         final responseSongs = listOfSongs
             .map<Song>(
               (json) => Song.fromJson(json as Map<String, dynamic>),

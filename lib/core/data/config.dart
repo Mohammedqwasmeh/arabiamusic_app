@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:arabiamusic_app/core/util/storage/local_secure_storage.dart';
 import 'package:arabiamusic_app/core/util/storage/secure_storage.dart';
+import 'package:arabiamusic_app/features/home/model/song.dart';
 
 class Config {
   factory Config({LocalSecureStorage? localSecureStorage}) {
@@ -14,6 +15,7 @@ class Config {
 
   String? _token;
   LocalSecureStorage? _localSecureStorage;
+  Song? nowPlaying;
 
   static final Config _singleton = Config._internal();
 

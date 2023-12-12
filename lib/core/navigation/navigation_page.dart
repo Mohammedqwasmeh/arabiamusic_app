@@ -44,40 +44,120 @@ class _NavigationPageState extends State<NavigationPage> {
               animationDuration: const Duration(milliseconds: 500),
               destinations: <Widget>[
                 NavigationDestination(
-                  icon: AnimatedContainer(
-                    duration: const Duration(milliseconds: 500),
-                    width: 20,
-                    child: SvgPicture.asset(
-                      'assets/images/home.svg',
-                      width: 26,
-                    ),
+                  icon: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Spacer(),
+                      AnimatedContainer(
+                        duration: const Duration(milliseconds: 500),
+                        width: 20,
+                        child: SvgPicture.asset(
+                          'assets/images/home.svg',
+                          width: 26,
+                        ),
+                      ),
+                      Spacer(),
+                      AnimatedOpacity(
+                        opacity: tabsRouter.activeIndex == 0 ? 1 : 0,
+                        duration: const Duration(milliseconds: 500),
+                        child: Container(
+                          height: 4,
+                          width: 16,
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(11),
+                            color: AppColors.pink[500],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  selectedIcon: AnimatedContainer(
-                    duration: const Duration(milliseconds: 500),
-                    width: 26,
-                    child: SvgPicture.asset(
-                      'assets/images/home.svg',
-                      width: 26,
-                    ),
+                  selectedIcon: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Spacer(),
+                      AnimatedContainer(
+                        duration: const Duration(milliseconds: 500),
+                        width: 26,
+                        child: SvgPicture.asset(
+                          'assets/images/home.svg',
+                          width: 26,
+                        ),
+                      ),
+                      Spacer(),
+                      AnimatedOpacity(
+                        opacity: tabsRouter.activeIndex == 0 ? 1 : 0,
+                        duration: const Duration(milliseconds: 500),
+                        child: Container(
+                          height: 4,
+                          width: 16,
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(11),
+                            color: AppColors.pink[500],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                   label: 'Home',
                 ),
                 NavigationDestination(
-                  icon: AnimatedContainer(
-                    duration: const Duration(milliseconds: 500),
-                    width: 20,
-                    child: SvgPicture.asset(
-                      'assets/images/search.svg',
-                      width: 26,
-                    ),
+                  icon: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Spacer(),
+                      AnimatedContainer(
+                        duration: const Duration(milliseconds: 500),
+                        width: 20,
+                        child: SvgPicture.asset(
+                          'assets/images/search.svg',
+                          width: 26,
+                        ),
+                      ),
+                      Spacer(),
+                      AnimatedOpacity(
+                        opacity: tabsRouter.activeIndex == 1 ? 1 : 0,
+                        duration: const Duration(milliseconds: 500),
+                        child: Container(
+                          height: 4,
+                          width: 16,
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(11),
+                            color: AppColors.pink[500],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  selectedIcon: AnimatedContainer(
-                    duration: const Duration(milliseconds: 500),
-                    width: 26,
-                    child: SvgPicture.asset(
-                      'assets/images/search.svg',
-                      width: 26,
-                    ),
+                  selectedIcon: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Spacer(),
+                      AnimatedContainer(
+                        duration: const Duration(milliseconds: 500),
+                        width: 26,
+                        child: SvgPicture.asset(
+                          'assets/images/search.svg',
+                          width: 26,
+                        ),
+                      ),
+                      Spacer(),
+                      AnimatedOpacity(
+                        opacity: tabsRouter.activeIndex == 1 ? 1 : 0,
+                        duration: const Duration(milliseconds: 500),
+                        child: Container(
+                          height: 4,
+                          width: 16,
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(11),
+                            color: AppColors.pink[500],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                   label: 'Search',
                 ),
@@ -99,40 +179,120 @@ class _NavigationPageState extends State<NavigationPage> {
                   ),
                 ),
                 NavigationDestination(
-                  icon: AnimatedContainer(
-                    duration: const Duration(milliseconds: 500),
-                    width: 22,
-                    child: SvgPicture.asset(
-                      'assets/images/podcast.svg',
-                      width: 26,
-                    ),
+                  icon: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Spacer(),
+                      AnimatedContainer(
+                        duration: const Duration(milliseconds: 500),
+                        width: 22,
+                        child: SvgPicture.asset(
+                          'assets/images/podcast.svg',
+                          width: 26,
+                        ),
+                      ),
+                      Spacer(),
+                      AnimatedOpacity(
+                        opacity: tabsRouter.activeIndex == 3 ? 1 : 0,
+                        duration: const Duration(milliseconds: 500),
+                        child: Container(
+                          height: 4,
+                          width: 16,
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(11),
+                            color: AppColors.pink[500],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  selectedIcon: AnimatedContainer(
-                    duration: const Duration(milliseconds: 500),
-                    width: 26,
-                    child: SvgPicture.asset(
-                      'assets/images/podcast.svg',
-                      width: 26,
-                    ),
+                  selectedIcon: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Spacer(),
+                      AnimatedContainer(
+                        duration: const Duration(milliseconds: 500),
+                        width: 26,
+                        child: SvgPicture.asset(
+                          'assets/images/podcast.svg',
+                          width: 26,
+                        ),
+                      ),
+                      Spacer(),
+                      AnimatedOpacity(
+                        opacity: tabsRouter.activeIndex == 3 ? 1 : 0,
+                        duration: const Duration(milliseconds: 500),
+                        child: Container(
+                          height: 4,
+                          width: 16,
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(11),
+                            color: AppColors.pink[500],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                   label: 'Podcasts',
                 ),
                 NavigationDestination(
-                  icon: AnimatedContainer(
-                    duration: const Duration(milliseconds: 500),
-                    width: 20,
-                    child: SvgPicture.asset(
-                      'assets/images/settings.svg',
-                      width: 25,
-                    ),
+                  icon: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Spacer(),
+                      AnimatedContainer(
+                        duration: const Duration(milliseconds: 500),
+                        width: 20,
+                        child: SvgPicture.asset(
+                          'assets/images/settings.svg',
+                          width: 25,
+                        ),
+                      ),
+                      Spacer(),
+                      AnimatedOpacity(
+                        opacity: tabsRouter.activeIndex == 4 ? 1 : 0,
+                        duration: const Duration(milliseconds: 500),
+                        child: Container(
+                          height: 4,
+                          width: 16,
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(11),
+                            color: AppColors.pink[500],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  selectedIcon: AnimatedContainer(
-                    duration: const Duration(milliseconds: 500),
-                    width: 25,
-                    child: SvgPicture.asset(
-                      'assets/images/settings.svg',
-                      width: 25,
-                    ),
+                  selectedIcon: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Spacer(),
+                      AnimatedContainer(
+                        duration: const Duration(milliseconds: 500),
+                        width: 25,
+                        child: SvgPicture.asset(
+                          'assets/images/settings.svg',
+                          width: 25,
+                        ),
+                      ),
+                      Spacer(),
+                      AnimatedOpacity(
+                        opacity: tabsRouter.activeIndex == 4 ? 1 : 0,
+                        duration: const Duration(milliseconds: 500),
+                        child: Container(
+                          height: 4,
+                          width: 16,
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(11),
+                            color: AppColors.pink[500],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                   label: 'Settings',
                 ),

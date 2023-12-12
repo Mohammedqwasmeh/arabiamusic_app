@@ -9,80 +9,65 @@ class ShimmerList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return ListView.builder(
-      padding: const EdgeInsets.symmetric(vertical: 8),
-      itemCount: 5,
+      padding: const EdgeInsets.symmetric(horizontal: 18),
+      itemCount: 12,
       itemBuilder: (context, index) => Container(
         padding: const EdgeInsets.symmetric(
-          horizontal: 18,
-          vertical: 18,
+          horizontal: 6,
+          vertical: 2,
         ),
-        margin: const EdgeInsets.symmetric(vertical: 7, horizontal: 16),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: const BorderRadius.all(
-            Radius.circular(12),
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: AppColors.black[600]!.withOpacity(0.1),
-              spreadRadius: 4,
-              blurRadius: 7,
-              offset: const Offset(0, 3),
-            ),
-          ],
-        ),
+        margin: const EdgeInsets.symmetric(vertical: 8),
         child: Shimmer.fromColors(
-          baseColor: AppColors.grey[900]!.withOpacity(0.3),
-          highlightColor: AppColors.green[500]!,
+          baseColor: AppColors.grey[700]!.withOpacity(0.3),
+          highlightColor: AppColors.pink[500]!,
           period: const Duration(milliseconds: 800),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: Row(
             children: [
               Container(
-                height: 200,
+                height: 40,
+                width: 40,
                 decoration: const BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(12),
-                  ),
+                  shape: BoxShape.circle,
                 ),
               ),
-              const SizedBox(
-                height: 24,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 60,
-                    height: 18,
-                    color: Colors.white,
-                  ),
-                  Container(
-                    width: 60,
-                    height: 18,
-                    color: Colors.white,
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 12,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 120,
-                    height: 18,
-                    color: Colors.white,
-                  ),
-                  Container(
-                    width: 120,
-                    height: 18,
-                    color: Colors.white,
-                  ),
-                ],
+              Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              width: screenWidth * 0.5,
+                              height: 24,
+                              color: Colors.white,
+                            ),
+                            const SizedBox(
+                              height: 12,
+                            ),
+                            Container(
+                              width: screenWidth * 0.2,
+                              height: 16,
+                              color: Colors.white,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: screenWidth * 0.15,
+                      height: 16,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
@@ -91,3 +76,5 @@ class ShimmerList extends StatelessWidget {
     );
   }
 }
+
+// 140 + Random().nextInt(200 - 140).toDouble(),

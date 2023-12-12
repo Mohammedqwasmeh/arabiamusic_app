@@ -9,7 +9,7 @@ class ToastUtil {
       msg: msg,
       toastLength: Toast.LENGTH_LONG,
       gravity: ToastGravity.CENTER,
-      backgroundColor: AppColors.purple[900],
+      backgroundColor: AppColors.pink[900],
     );
   }
 }
