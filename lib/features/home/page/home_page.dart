@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
       case HomeSuccess:
         cashedAllSongs = (state as HomeSuccess).allSongs;
         return cashedAllSongs.isNotEmpty
-            ? _emptyAllSongs(context)
+            ? _allSongsList(context, cashedAllSongs)
             : _emptyAllSongs(context);
       case HomeError:
         return _errorView(context);
